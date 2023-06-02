@@ -40,8 +40,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="6Qg-7v-ZuI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WhatsChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-Tc-mt5">
-                                <rect key="frame" x="104" y="326" width="200" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WhatsChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-Tc-mt5" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="86" y="325" width="200" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
@@ -76,6 +76,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login!"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aV0-Ch-pVg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-uP-epn">
                                 <rect key="frame" x="147" y="149" width="97" height="34"/>
@@ -95,6 +98,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="64D-HN-iRp"/>
                     <connections>
+                        <outlet property="emailField" destination="Zjf-uP-epn" id="Nf7-hp-uOQ"/>
+                        <outlet property="passwordField" destination="geX-mq-Hwt" id="C1w-BG-783"/>
                         <segue destination="FON-md-xlk" kind="show" identifier="LoginToChat" id="wfa-Zd-2ij"/>
                     </connections>
                 </viewController>
@@ -122,25 +127,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdR-gL-RAw">
-                                <rect key="frame" x="164" y="383" width="63" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-Sq-fAx">
+                                <rect key="frame" x="141" y="390" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                <connections>
+                                    <action selector="registerPressed:" destination="VLT-vW-FAC" eventType="touchUpInside" id="I61-3d-Imy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TuN-Wp-9jK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="phR-NL-WFd"/>
                     <connections>
+                        <outlet property="emailField" destination="HRg-i1-YMw" id="txT-h7-YhQ"/>
+                        <outlet property="passwordField" destination="6xx-II-nuP" id="uvc-u5-OPf"/>
                         <segue destination="FON-md-xlk" kind="show" identifier="RegisterToChat" id="k1Q-hX-3cL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTn-S2-beZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630.7692307692305" y="48.341232227488149"/>
+            <point key="canvasLocation" x="2629.2307692307691" y="48.341232227488149"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="lQn-yW-iku">
@@ -159,7 +168,16 @@
                         <viewLayoutGuide key="safeArea" id="2AW-si-Wk9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Kel-KG-Qpb"/>
+                    <navigationItem key="navigationItem" id="Kel-KG-Qpb">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="WBu-L3-4tS">
+                            <connections>
+                                <action selector="logOutPressed:" destination="FON-md-xlk" id="HkW-f9-nP5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="7bD-Dh-V0E" id="dVz-zw-dWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od9-5N-hyC" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,6 +202,9 @@
             <point key="canvasLocation" x="-523.07692307692309" y="47.630331753554501"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="XoR-Tc-mt5"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="wfa-Zd-2ij"/>
     </inferredMetricsTieBreakers>

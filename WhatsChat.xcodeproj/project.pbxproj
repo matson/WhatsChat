@@ -16,9 +16,15 @@
 		3F6810342A27AF8600F387F4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6810332A27AF8600F387F4 /* RegisterViewController.swift */; };
 		3F6810362A27AF9B00F387F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6810352A27AF9B00F387F4 /* LoginViewController.swift */; };
 		3F6810382A27AFAE00F387F4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6810372A27AFAE00F387F4 /* ChatViewController.swift */; };
+		3F78F2F52A29063300394E3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F78F2F42A29063300394E3D /* GoogleService-Info.plist */; };
+		3FB0511F2A2A472A007BF725 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB0511E2A2A472A007BF725 /* FirebaseAuth */; };
+		3FB051212A2A472A007BF725 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB051202A2A472A007BF725 /* FirebaseFirestore */; };
+		FC3603D2378AA42FA4613044 /* Pods_WhatsChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6EA0A9D292F95B22A3F2E5 /* Pods_WhatsChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0163BFB21721C4DC369AFF8B /* Pods-WhatsChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsChat.release.xcconfig"; path = "Target Support Files/Pods-WhatsChat/Pods-WhatsChat.release.xcconfig"; sourceTree = "<group>"; };
+		1FBDE45910F07395610B7EA1 /* Pods-WhatsChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsChat.debug.xcconfig"; path = "Target Support Files/Pods-WhatsChat/Pods-WhatsChat.debug.xcconfig"; sourceTree = "<group>"; };
 		3F68101C2A27ADD400F387F4 /* WhatsChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68101F2A27ADD400F387F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6810212A27ADD400F387F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		3F6810332A27AF8600F387F4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3F6810352A27AF9B00F387F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F6810372A27AFAE00F387F4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3F78F2F42A29063300394E3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Pods/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FC6EA0A9D292F95B22A3F2E5 /* Pods_WhatsChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3603D2378AA42FA4613044 /* Pods_WhatsChat.framework in Frameworks */,
+				3FB0511F2A2A472A007BF725 /* FirebaseAuth in Frameworks */,
+				3FB051212A2A472A007BF725 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +59,8 @@
 			children = (
 				3F68101E2A27ADD400F387F4 /* WhatsChat */,
 				3F68101D2A27ADD400F387F4 /* Products */,
+				5520A8BBBF287AF401074F62 /* Pods */,
+				C50F8245631B4B3D118A2786 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +83,7 @@
 				3F6810282A27ADD800F387F4 /* Assets.xcassets */,
 				3F68102A2A27ADD800F387F4 /* LaunchScreen.storyboard */,
 				3F68102D2A27ADD800F387F4 /* Info.plist */,
+				3F78F2F42A29063300394E3D /* GoogleService-Info.plist */,
 			);
 			path = WhatsChat;
 			sourceTree = "<group>";
@@ -101,6 +115,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5520A8BBBF287AF401074F62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FBDE45910F07395610B7EA1 /* Pods-WhatsChat.debug.xcconfig */,
+				0163BFB21721C4DC369AFF8B /* Pods-WhatsChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C50F8245631B4B3D118A2786 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC6EA0A9D292F95B22A3F2E5 /* Pods_WhatsChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,15 +139,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F6810302A27ADD800F387F4 /* Build configuration list for PBXNativeTarget "WhatsChat" */;
 			buildPhases = (
+				33004AA1745E2DD83E2CC0E8 /* [CP] Check Pods Manifest.lock */,
 				3F6810182A27ADD400F387F4 /* Sources */,
 				3F6810192A27ADD400F387F4 /* Frameworks */,
 				3F68101A2A27ADD400F387F4 /* Resources */,
+				133CF2C5D2E8F62DE0599CEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WhatsChat;
+			packageProductDependencies = (
+				3FB0511E2A2A472A007BF725 /* FirebaseAuth */,
+				3FB051202A2A472A007BF725 /* FirebaseFirestore */,
+			);
 			productName = WhatsChat;
 			productReference = 3F68101C2A27ADD400F387F4 /* WhatsChat.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 3F6810132A27ADD400F387F4;
+			packageReferences = (
+				3FB0511D2A2A472A007BF725 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3F68101D2A27ADD400F387F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,12 +200,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F68102C2A27ADD800F387F4 /* LaunchScreen.storyboard in Resources */,
+				3F78F2F52A29063300394E3D /* GoogleService-Info.plist in Resources */,
 				3F6810292A27ADD800F387F4 /* Assets.xcassets in Resources */,
 				3F6810272A27ADD400F387F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		133CF2C5D2E8F62DE0599CEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsChat/Pods-WhatsChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsChat/Pods-WhatsChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsChat/Pods-WhatsChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33004AA1745E2DD83E2CC0E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F6810182A27ADD400F387F4 /* Sources */ = {
@@ -319,6 +402,7 @@
 		};
 		3F6810312A27ADD800F387F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBDE45910F07395610B7EA1 /* Pods-WhatsChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +431,7 @@
 		};
 		3F6810322A27ADD800F387F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0163BFB21721C4DC369AFF8B /* Pods-WhatsChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +480,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FB0511D2A2A472A007BF725 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FB0511E2A2A472A007BF725 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FB0511D2A2A472A007BF725 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3FB051202A2A472A007BF725 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FB0511D2A2A472A007BF725 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F6810142A27ADD400F387F4 /* Project object */;
 }

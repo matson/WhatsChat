@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     
@@ -13,15 +14,21 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var registerButton: UIButton!
     
-    @IBOutlet weak var whatsChat: UILabel!
+    @IBOutlet weak var whatsChat: CLTypingLabel!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        //animation
+        whatsChat.text = "WhatsChat!"
+        
+        //This code had to be added because of the bug apple still has not fixed?
+        
         let newNavBarAppearance = UINavigationBarAppearance()
 
         // Configuring an opaque background
-//        newNavBarAppearance.configureWithOpaqueBackground()
+        //  newNavBarAppearance.configureWithOpaqueBackground()
         // or you can use:
          newNavBarAppearance.configureWithTransparentBackground()
         // when you wanted a configuration with a transparent background
@@ -39,6 +46,8 @@ class WelcomeViewController: UIViewController {
         if #available(iOS 15.0, *) {
             navigationController?.navigationBar.compactScrollEdgeAppearance = newNavBarAppearance
         }
+        
+        
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
