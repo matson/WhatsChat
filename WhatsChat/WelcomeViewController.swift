@@ -21,7 +21,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         //animation
-        whatsChat.text = "WhatsChat!"
+        whatsChat.text = C.appName
         
         //This code had to be added because of the bug apple still has not fixed?
         

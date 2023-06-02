@@ -19,6 +19,10 @@
 		3F78F2F52A29063300394E3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F78F2F42A29063300394E3D /* GoogleService-Info.plist */; };
 		3FB0511F2A2A472A007BF725 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB0511E2A2A472A007BF725 /* FirebaseAuth */; };
 		3FB051212A2A472A007BF725 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FB051202A2A472A007BF725 /* FirebaseFirestore */; };
+		3FB051232A2A5A53007BF725 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB051222A2A5A53007BF725 /* Constants.swift */; };
+		3FB051252A2A699A007BF725 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB051242A2A699A007BF725 /* Message.swift */; };
+		3FB051282A2A6EC0007BF725 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB051262A2A6EC0007BF725 /* MessageCell.swift */; };
+		3FB051292A2A6EC0007BF725 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB051272A2A6EC0007BF725 /* MessageCell.xib */; };
 		FC3603D2378AA42FA4613044 /* Pods_WhatsChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6EA0A9D292F95B22A3F2E5 /* Pods_WhatsChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		3F6810352A27AF9B00F387F4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F6810372A27AFAE00F387F4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3F78F2F42A29063300394E3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Pods/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3FB051222A2A5A53007BF725 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3FB051242A2A699A007BF725 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3FB051262A2A6EC0007BF725 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		3FB051272A2A6EC0007BF725 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		FC6EA0A9D292F95B22A3F2E5 /* Pods_WhatsChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,7 @@
 				3F68102A2A27ADD800F387F4 /* LaunchScreen.storyboard */,
 				3F68102D2A27ADD800F387F4 /* Info.plist */,
 				3F78F2F42A29063300394E3D /* GoogleService-Info.plist */,
+				3FB051222A2A5A53007BF725 /* Constants.swift */,
 			);
 			path = WhatsChat;
 			sourceTree = "<group>";
@@ -102,6 +111,7 @@
 		3F68103A2A27AFDD00F387F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FB051242A2A699A007BF725 /* Message.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -111,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				3F6810252A27ADD400F387F4 /* Main.storyboard */,
+				3FB051262A2A6EC0007BF725 /* MessageCell.swift */,
+				3FB051272A2A6EC0007BF725 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB051292A2A6EC0007BF725 /* MessageCell.xib in Resources */,
 				3F68102C2A27ADD800F387F4 /* LaunchScreen.storyboard in Resources */,
 				3F78F2F52A29063300394E3D /* GoogleService-Info.plist in Resources */,
 				3F6810292A27ADD800F387F4 /* Assets.xcassets in Resources */,
@@ -259,8 +272,11 @@
 				3F6810202A27ADD400F387F4 /* AppDelegate.swift in Sources */,
 				3F6810222A27ADD400F387F4 /* SceneDelegate.swift in Sources */,
 				3F6810362A27AF9B00F387F4 /* LoginViewController.swift in Sources */,
+				3FB051232A2A5A53007BF725 /* Constants.swift in Sources */,
+				3FB051252A2A699A007BF725 /* Message.swift in Sources */,
 				3F6810382A27AFAE00F387F4 /* ChatViewController.swift in Sources */,
 				3F6810342A27AF8600F387F4 /* RegisterViewController.swift in Sources */,
+				3FB051282A2A6EC0007BF725 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
