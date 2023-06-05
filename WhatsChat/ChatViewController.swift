@@ -14,10 +14,12 @@ import FirebaseAuth
 
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageField: UITextField!
-   
+    
+    let db = Firestore.firestore()
+    
     
     var messages: [Message] = [
         Message(sender: "1@2.com", body: "Hey!"),
@@ -36,8 +38,66 @@ class ChatViewController: UIViewController {
         //message bubbles:
         tableView.register(UINib(nibName: C.cellNibName, bundle: nil), forCellReuseIdentifier: C.cellIdentifier)
         
+        //loads messages:
+        loadMessages()
+        
+    }
+    
+    func loadMessages(){
+        
+       
+        //closure
+        db.collection(C.FStore.collectionName)
+            .order(by: C.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
+                
+            self.messages = []
+                
+            if let e = error {
+                print("There was an issue retrieving data from FireStore. \(e)")
+            }else{
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let messageSender = data[C.FStore.senderField] as? String, let messageBody = data[C.FStore.bodyField] as? String{
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                               
+                            //need to fetch the main thread
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 
+
+    @IBAction func sendPressed(_ sender: UIButton) {
+        
+        if let messageBody = messageField.text, let messageSender = Auth.auth().currentUser?.email {
+            
+            //send to FireStore
+            db.collection(C.FStore.collectionName).addDocument(data: [
+                C.FStore.senderField: messageSender,
+                C.FStore.bodyField: messageBody,
+                C.FStore.dateField: Date().timeIntervalSince1970 //need timestamp to order messages.
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                }else{
+                    print("successfully saved data")
+                }
+            }
+            
+        }
+        
+    }
+    
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
       
         let firebaseAuth = Auth.auth()

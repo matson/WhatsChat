@@ -13,4 +13,11 @@ struct C {
     static let loginSegue = "LoginToChat"
     static let cellIdentifier = "ReuseableCell"
     static let cellNibName = "MessageCell"
+    
+    struct FStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+        static let dateField = "date"
+    }
 }
