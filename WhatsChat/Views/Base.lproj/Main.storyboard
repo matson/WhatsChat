@@ -17,27 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtH-UX-OKj">
-                                <rect key="frame" x="152" y="556" width="87" height="35"/>
+                                <rect key="frame" x="54" y="556" width="304" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Register">
-                                    <color key="baseForegroundColor" red="0.62745098039215685" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerPressed:" destination="7Kv-NI-lRy" eventType="touchUpInside" id="psN-JV-YIx"/>
                                     <segue destination="VLT-vW-FAC" kind="show" id="be1-bI-btV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VST-34-MdN">
-                                <rect key="frame" x="163" y="645" width="66" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
-                                <connections>
-                                    <action selector="loginPressed:" destination="7Kv-NI-lRy" eventType="touchUpInside" id="TDS-A3-WgI"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6Qg-7v-ZuI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WhatsChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-Tc-mt5" customClass="CLTypingLabel" customModule="CLTypingLabel">
@@ -48,6 +38,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VST-34-MdN">
+                                <rect key="frame" x="67" y="599" width="244" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <color key="baseForegroundColor" red="0.62723722910000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginPressed:" destination="7Kv-NI-lRy" eventType="touchUpInside" id="TDS-A3-WgI"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6Qg-7v-ZuI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4BU-Zm-xAk"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -61,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46q-FE-9A9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406.15384615384613" y="47.630331753554501"/>
+            <point key="canvasLocation" x="884.61538461538464" y="47.630331753554501"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -105,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="1176"/>
+            <point key="canvasLocation" x="885" y="886"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="lfV-rC-158">
@@ -149,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTn-S2-beZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2629.2307692307691" y="48.341232227488149"/>
+            <point key="canvasLocation" x="2191" y="129"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="lQn-yW-iku">
@@ -178,7 +182,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="wake.circle" catalog="system"/>
                                 <connections>
-                                    <action selector="sendPressed:" destination="FON-md-xlk" eventType="touchUpInside" id="J97-vF-t08"/>
+                                    <action selector="sendPressed:" destination="FON-md-xlk" eventType="touchUpInside" id="Nij-HU-1mh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od9-5N-hyC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793.8461538461538" y="1175.829383886256"/>
+            <point key="canvasLocation" x="2192" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3ko-pY-7LR">
@@ -209,6 +213,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CpC-cq-hVL">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemCyanColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -221,7 +226,9 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="XoR-Tc-mt5"/>
+        <designable name="XoR-Tc-mt5">
+            <size key="intrinsicContentSize" width="199.66666666666666" height="45.666666666666664"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="wfa-Zd-2ij"/>
@@ -230,6 +237,15 @@
         <image name="wake.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

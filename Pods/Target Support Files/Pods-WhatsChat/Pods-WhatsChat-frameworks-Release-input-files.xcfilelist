@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-WhatsChat/Pods-WhatsChat-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CLTypingLabel/CLTypingLabel.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework

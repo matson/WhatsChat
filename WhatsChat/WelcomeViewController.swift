@@ -10,7 +10,14 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!{
+        didSet{
+            loginButton.backgroundColor = .clear
+            loginButton.layer.cornerRadius = 10
+            loginButton.layer.borderWidth = 2
+            loginButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
     @IBOutlet weak var registerButton: UIButton!
     

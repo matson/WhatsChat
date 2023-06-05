@@ -6,6 +6,7 @@ target 'WhatsChat' do
 
   # Pods for WhatsChat
   pod 'CLTypingLabel'
+  pod 'IQKeyboardManager'
  
  
 

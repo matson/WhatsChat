@@ -67,6 +67,8 @@ class ChatViewController: UIViewController {
                             //need to fetch the main thread
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                             
                         }
@@ -91,6 +93,7 @@ class ChatViewController: UIViewController {
                     print("There was an issue saving data to firestore, \(e)")
                 }else{
                     print("successfully saved data")
+                    self.messageField.text = ""
                 }
             }
             
@@ -122,9 +125,29 @@ extension ChatViewController: UITableViewDataSource {
     
     //which tableView cell will show?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: C.cellIdentifier, for: indexPath) as! MessageCell
         
-        cell.textLabel?.text = messages[indexPath.row].body
+        cell.textLabel?.text = message.body
+        
+        //This is a message from the current user.
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = .blue
+            cell.label.textColor = .purple
+            
+        }else{
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = .gray
+            cell.label.textColor = .yellow
+            
+        }
+        
+       
         
         
         return cell
