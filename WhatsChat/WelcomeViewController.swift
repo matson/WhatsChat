@@ -16,10 +16,18 @@ class WelcomeViewController: UIViewController {
             loginButton.layer.cornerRadius = 10
             loginButton.layer.borderWidth = 2
             loginButton.layer.borderColor = UIColor.white.cgColor
+            
         }
     }
     
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton! {
+        didSet{
+            registerButton.backgroundColor = .clear
+            registerButton.layer.cornerRadius = 10
+            registerButton.layer.borderWidth = 2
+            registerButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
     @IBOutlet weak var whatsChat: CLTypingLabel!
     
@@ -41,7 +49,7 @@ class WelcomeViewController: UIViewController {
         // when you wanted a configuration with a transparent background
         
         // Navigation bar's background color
-        newNavBarAppearance.backgroundColor = .magenta
+        newNavBarAppearance.backgroundColor = UIColor(red: 180/255, green: 255/255, blue: 255/255, alpha: 1.0)
         
         // Navigation bar's title foreground color
         newNavBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]

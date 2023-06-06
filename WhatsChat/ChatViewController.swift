@@ -12,6 +12,8 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
+/*Not the best UI for the Chat View, still have some ugly features but overall functionality is present.*/
+
 
 class ChatViewController: UIViewController {
     
@@ -136,16 +138,16 @@ extension ChatViewController: UITableViewDataSource {
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.messageBubble.backgroundColor = .blue
-            cell.label.textColor = .purple
+            cell.messageBubble.backgroundColor = UIColor(red: 59/255, green: 161/255, blue: 181/255, alpha: 1.0)
+            cell.label.textColor = .white
             
         }else{
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
-            cell.messageBubble.backgroundColor = .gray
-            cell.label.textColor = .yellow
-            
+            cell.messageBubble.backgroundColor = UIColor(red: 86/255, green: 90/255, blue: 181/255, alpha: 1.0)
+            cell.label.textColor = .white
         }
+        
         
        
         

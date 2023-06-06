@@ -18,6 +18,17 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!{
+            didSet{
+                loginButton.backgroundColor = .clear
+                loginButton.layer.cornerRadius = 10
+                loginButton.layer.borderWidth = 2
+                loginButton.layer.borderColor = UIColor.white.cgColor
+                
+            }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

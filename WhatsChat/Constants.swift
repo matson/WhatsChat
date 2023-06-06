@@ -11,7 +11,7 @@ struct C {
     static let appName = "WhatsChat"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
-    static let cellIdentifier = "ReuseableCell"
+    static let cellIdentifier = "ReusableCell2"
     static let cellNibName = "MessageCell"
     
     struct FStore {
